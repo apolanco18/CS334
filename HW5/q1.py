@@ -130,30 +130,30 @@ def main():
     #     print(test.reconstruction_err_)
 
     # This code graphs the roc curve of all the data
-    # rocNormfpr, rocNormtpr, thresholds = unregLogNorm(xTrainNorm,yTrain,xTestNorm,yTest)
+    rocNormfpr, rocNormtpr, thresholds = unregLogNorm(xTrainNorm,yTrain,xTestNorm,yTest)
     # print(rocNormfpr)
     # print(rocNormtpr)
 
-    # rocPCAfpr, rocPCAtpr, thresholds1 = unregLogPCA(xTrainNorm,yTrain,xTestNorm,yTest)
+    rocPCAfpr, rocPCAtpr, thresholds1 = unregLogPCA(xTrainNorm,yTrain,xTestNorm,yTest)
     # print(rocPCAfpr)
     # print(rocPCAtpr)
 
-    # rocMNFfpr, rocMNFtpr, thresholds2 = unregLogPCA(xTrain,yTrain,xTest,yTest)
+    rocMNFfpr, rocMNFtpr, thresholds2 = unregLogPCA(xTrain,yTrain,xTest,yTest)
     # print(rocMNFfpr)
     # print(rocMNFtpr)
 
-    # fig = plt.figure()
-    # ax = fig.add_subplot(111,)
-    # ax.scatter(rocNormfpr,rocNormtpr, c = '#e11e72',label = 'Norm Data')
-    # ax.scatter(rocPCAfpr,rocPCAtpr, c = '#26d97e', label = 'PCA Data')
-    # ax.scatter(rocMNFfpr,rocMNFtpr, c = '#4279bd', label = 'MNF Data')
+    fig = plt.figure()
+    ax = fig.add_subplot(111,)
+    ax.scatter(rocNormfpr,rocNormtpr, c = '#e11e72',label = 'Norm Data')
+    ax.scatter(rocPCAfpr,rocPCAtpr, c = '#26d97e', label = 'PCA Data')
+    ax.scatter(rocMNFfpr,rocMNFtpr, c = '#4279bd', label = 'MNF Data')
 
     
-    # ax.set_xlabel('fpr')
-    # ax.set_ylabel('tpr')
-    # ax.legend()
+    ax.set_xlabel('fpr')
+    ax.set_ylabel('tpr')
+    ax.legend()
 
-    # plt.show()
+    plt.show()
 
 
 
